@@ -1,0 +1,30 @@
+name: "scgptEval"
+mode: "dev"
+port: 8089
+version: "v0.0.1"
+start_time: "2023-01-01"
+machine_id: 1
+
+log:
+  level: "debug"
+  filename: "runs/logs/scgptEval.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+mysql:
+  #host: "127.0.0.1"
+  host: "172.17.0.1"
+  port: 3306
+  #user: "root"
+  user: "moker"
+  password: "moker13579"
+  db_name: "scgptEval"
+  db_params: "charset=utf8mb4&parseTime=True&loc=Local"
+  max_open_conns: 200
+  max_idle_conns: 50
+redis:
+  host: "172.17.0.1"
+  port: 6379
+  db: 0
+  password: ""
+  pool_size: 100
